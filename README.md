@@ -2,8 +2,6 @@
 
 **HashGen** is a flexible, modular cryptographic tool designed to generate hashes and signatures using user-defined Python algorithms. It features a modern, responsive GUI built with CustomTkinter and allows for valid runtime injection of custom logic.
 
-![HashGen UI](https://dummyimage.com/600x400/000/fff&text=HashGen+UI+Placeholder)
-
 ## Features
 
 *   **Dynamic Algorithm Support**: Write implementation logic in Python and execute it on the fly. No need to restart the application.
@@ -76,9 +74,3 @@ def generate(payload, passcode, api_key="", key_order=None):
     
     return hmac.new(passcode.encode(), msg.encode(), hashlib.sha256).hexdigest()
 ```
-
-## Security Note
-
-⚠️ **Warning**: This tool uses Python's `exec()` function to run the code in the snippets. This is powerful but potentially dangerous.
-*   **Only run snippets you trust.**
-*   Do not load `snippets.json` files from untrusted sources.
